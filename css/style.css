@@ -1,33 +1,4 @@
-/*
-Template Name: Bodo - Simple One Page Personal
-Author: BdgPixel
-Author URI:  http://themeforest.net/user/BdgPixel
-*/
-/* -----------------------------------------------------------
-TABLE OF CONTENTS:
---------------------------------------------------------------
-1) General
-2) Page Loader
-3) Helper
-4) Header
-5) Typography
-6) Hero
-7) Sections
- 7.a) portfolio
- 7.b) service
- 7.c) experience
- 7.d) testimonial
- 7.e) blog
- 7.f) about
- 7.g) contact
- 7.h) footer
-8) Components
- 8.a) skills
 
-
--------------------------------------------------------------
-
-------------------------------------------------------------*/
 /*-----------------------------------------1) General--------------------------------------------------*/
 @font-face {
   font-family: 'Glyphter';
@@ -834,93 +805,8 @@ ul.portfolio-image li .desc{
   z-index: 1;
   position: relative;
 }
-/*-------------- e. blog -------------*/
-.grid {margin-top: 60px;}
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.grid-item {
-  width: 33.333%;
-  float: left;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 30px;
-}
-.grid-item .wrap-article {
-  border: 1px solid rgba(129, 129, 129, 0.1);
-  background: #ffffff;
-  padding: 30px 20px;
-}
-.grid-item .wrap-article img {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-}
-.grid-item .wrap-article .img-circle {
-  width: 133px;
-  height: 133px;
-}
-.grid-item .wrap-article .fancy {
-  line-height: 0.5;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 40px;
-  color: #818181;
-}
-.grid-item .wrap-article .fancy span {
-  display: inline-block;
-  position: relative;
-}
-.grid-item .wrap-article .fancy span:before,
-.grid-item .wrap-article .fancy span:after {
-  content: "";
-  margin-top: 1px;
-  position: absolute;
-  height: 5px;
-  border-top: 1px solid #dedede;
-  top: 0;
-  width: 60%;
-}
-.grid-item .wrap-article .fancy span:before {
-  right: 100%;
-  margin-right: 5px;
-}
-.grid-item .wrap-article .fancy span:after {
-  left: 100%;
-  margin-left: 5px;
-}
-.grid-item .wrap-article .title {
-  font-size: 16px;
-  padding: 0 10px 0 10px;
-  text-align: center;
-  letter-spacing: 0.1;
-  line-height: 26px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.grid-item .wrap-article .title:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  bottom: -20px;
-  height: 1px;
-  background: #dedede;
-  width: 48px;
-  left: 0;
-  margin-top: 30px;
-}
-.grid-item .wrap-article .content-blog {
-  margin-top: 30px;
-  padding: 0 10px 0 10px;
-  text-align: justify;
-  color: #5f5f5f;
-}
+
+
 /*---------- f. quote -----------*/
 #about{
   min-height: 650px;
@@ -994,146 +880,7 @@ ul.portfolio-image li .desc{
   font-weight: 500;
 }
 
-/*---------- g. contact -----------
-#contact {padding: 120px 0 200px 0;}
-#contact form {
-  margin-top: 25px;
-}
-#contact .slider-masks {
-  background-color: rgba(129, 129, 129, 0.7);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-#contact .group {
-  position: relative;
-  margin-bottom: 65px;
-}
-#contact input,
-#contact textarea {
-  font-size: 13px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #2b2b2b;
-  background: transparent;
-  color: #969696;
-  font-size: 13px;
-}
-#contact input:focus,
-#contact textarea:focus {
-  outline: none;
-  border-bottom: none;
-}
-#contact label {
-  color: #2b2b2b;
-  font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-#contact input:focus ~ label,
-#contact input:valid ~ label,
-#contact textarea:focus ~ label,
-#contact textarea:valid ~ label {
-  top: -25px;
-  font-size: 12px;
-  color: #818181;
-}
-#contact .bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-#contact .bar:before,
-#contact .bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #818181;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-#contact .bar:before {
-  left: 50%;
-}
-#contact .bar:after {
-  right: 50%;
-}
-#contact input:focus ~ .bar:before,
-#contact input:focus ~ .bar:after,
-#contact textarea:focus ~ .bar:after,
-#contact textarea:focus ~ .bar:before {
-  width: 50%;
-}
-#contact .highlight {
-  position: absolute;
-  height: 60%;
-  width: 100%;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-#contact input:focus ~ .highlight,
-#contact textarea:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-#contact input[type=submit] {
-  border: 1px solid #2b2b2b !important;
-  color: #2b2b2b;
-  padding: 10px;
-  font-weight: 700;
-  letter-spacing: 0.9px;
-  text-transform: uppercase;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-#contact input[type=submit]:hover {
-  background: #2b2b2b;
-  color: #ffffff;
-}
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #5264AE;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #818181;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@keyframes inputHighlighter {
-  from {
-    background: #818181;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
+
 /*-------------- h. footer ------------------*/
 .footer-top{
   width: 100%;
@@ -1293,3 +1040,8 @@ ul.portfolio-image li .desc{
   #total{
     width: 90%;
   }
+
+.graphic{
+  width: 10%;
+  height: auto;
+}
